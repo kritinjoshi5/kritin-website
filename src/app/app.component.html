@@ -1,0 +1,15 @@
+<mat-toolbar style="background-color: transparent; padding: 1rem; height: 100px;"
+fxLayout="row" fxLayoutAlign="center center">
+  <span style="width: 80%;" fxLayout="row" fxLayoutAlign="space-between center">
+    <img src="../../assets/logo.png" routerLink="/" alt="" height="60px" style="outline: none;">
+    <div fxLayout="row" fxLayoutAlign="start end" fxLayoutGap="16px" style="height: 60px;">
+      <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" fxHide.xs routerLinkActive="active-link" routerLink="/">Home</a>
+      <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link" routerLink="about">About</a>
+      <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link" routerLink="contact">Contact</a>
+    </div>
+  </span>
+</mat-toolbar>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div style="border-bottom: 1px solid #DDDDDD; box-shadow: 1px 4px 7px #DDDDDD; width: 80%;"></div>
+</div>
+<router-outlet></router-outlet>

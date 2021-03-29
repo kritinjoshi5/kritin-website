@@ -1,0 +1,98 @@
+<div fxLayout="row" style="width: 100%; margin-top: 1em;" fxLayout.xs="column" fxLayoutAlign="space-around center"
+    fxLayoutGap="16px">
+    <mat-card class="card-width">
+        <mat-card-title>
+            About
+        </mat-card-title>
+        <mat-divider style="border-top-color: white"></mat-divider>
+        <br>
+        <mat-card-content>
+            <p>I love designing and developing web applications. It is my constant endeavour
+                to serve to my clients with solutions that are in the best interest of their business requirements,
+                instead of what technologies I embrace as a developer.
+            </p>
+        </mat-card-content>
+        <br>
+        <mat-card-title>
+            Technologies
+        </mat-card-title>
+        <mat-divider style="border-top-color: white"></mat-divider>
+        <br>
+        <mat-card-subtitle>
+            <mat-chip-list fxLayout="row">
+                <mat-chip color="primary" selected
+                    *ngFor="let tech of ['Angular', 'ReactJs', 'VueJs', 'Html', 'Styling', 'UX/UI Design']">
+                    <span style="width: 20px; border-radius: 50%; height: 20px;" fxLayout="row"
+                        fxLayoutAlign="center center"
+                        [ngStyle]="{'background-color': tech === 'ReactJs' ? 'black' : 'white'}">
+                        <img src="../../assets/angular-logo.svg.png" width="20px" *ngIf="tech === 'Angular'" alst="">
+                        <img src="../../assets/react-logo.svg.png" width="20px" *ngIf="tech === 'ReactJs'" alt="">
+                        <img src="../../assets/vuejs-logo.png" width="15px" *ngIf="tech === 'VueJs'" alt="">
+                        <img src="../../assets/html-logo.jpeg" width="18px" style="border-radius: 50%;"
+                            *ngIf="tech === 'Html'" alt="">
+                        <img src="../../assets/css-logo.jpeg" width="18px" style="border-radius: 50%;"
+                            *ngIf="tech === 'Styling'" alt="">
+                        <img src="../../assets/uxi-logo.jpeg" width="18px" style="border-radius: 50%;"
+                            *ngIf="tech === 'UX/UI Design'" alt="">
+                    </span>
+                    &nbsp;
+                    {{ tech }}
+                    &nbsp;
+                </mat-chip>
+            </mat-chip-list>
+        </mat-card-subtitle>
+        <br>
+        <mat-card-title>
+            Experience
+        </mat-card-title>
+        <mat-divider style="border-top-color: white"></mat-divider>
+        <br>
+        <mat-card-content>
+            <h3>
+                # Provakil - Software Developer
+            </h3>
+            <span>
+                August 2019 - present <br>
+                <div>
+                    Owned multiple modules of industry leading application; execution includes -
+                    <ul>
+                        <li>
+                            Migration of production web app incrementally with 5000 DAU from backbone to Vuejs
+                        </li>
+                        <li>
+                            Building modules for highly configurable workflows
+                        </li>
+                        <li>
+                            Studies of user interactions and modified parts of applications for enhanced UX
+                        </li>
+                    </ul>
+                </div>
+            </span>
+            <h3>
+                # Sanskrut Corpation - Frontend Lead
+            </h3>
+            <p>
+                July 2016 - August 2019<br>
+            </p>
+        </mat-card-content>
+        <br>
+        <mat-card-title>
+            Social
+        </mat-card-title>
+        <mat-divider style="border-top-color: white"></mat-divider>
+        <br>
+        <mat-card-content fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="center center" fxLayoutGap="12px">
+            <a href="https://www.facebook.com/kritin.joshi.5" class="social-anchor">
+                <img height="40px" src="../../assets/facebook-logo.png" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/kritin-joshi/" class="social-anchor">
+                <img height="50px" src="../../assets/linkedin-logo.png" alt="" style="margin-top: -5px;">
+            </a>
+            <a href="https://github.com/kritinjoshi5" class="social-anchor">
+                <img height="40px"  style="
+                background-color: white;
+                border-radius: 50%;" src="../../assets/github_logo.png" alt="">
+            </a>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,39 @@
+{
+    "conditions": [
+      {
+        "name": "ios",
+        "expression": "device.os == 'ios'"
+      }
+    ],
+    "parameters": {
+      "welcome_message": {
+        "defaultValue": {
+          "value": "Welcome to this sample app"
+        },
+        "conditionalValues": {
+          "ios": {
+            "value": "Welcome to this sample iOS app"
+          }
+        }
+      },
+      "welcome_message_caps": {
+        "defaultValue": {
+          "value": "false"
+        }
+      },
+      "header_text": {
+        "defaultValue": {
+          "useInAppDefault": true
+        }
+      }
+    },
+    "version": {
+      "versionNumber": "1",
+      "updateTime": "2021-03-07T18:00:00.000Z",
+      "updateUser": {
+        "email": "kriti.joshi.5@gmail.com"
+      },
+      "updateOrigin": "CONSOLE",
+      "updateType": "INCREMENTAL_UPDATE"
+    }
+  }
