@@ -1,15 +1,44 @@
-<mat-toolbar class="toolbar"
-fxLayout="row" fxLayoutAlign="center center">
-  <span class="toolbar-content" fxLayout="row" fxLayoutAlign="space-between center">
-    <img src="../../assets/logo.png" routerLink="/" alt="" height="60px" style="outline: none;">
-    <div fxLayout="row" fxLayoutAlign="start end" fxLayoutGap="16px" style="height: 60px;">
-      <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" fxHide.xs routerLinkActive="active-link" routerLink="/">Home</a>
-      <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link" routerLink="about">About</a>
-      <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link" routerLink="contact">Contact</a>
+<mat-sidenav-container style="background: transparent;">
+  <mat-toolbar class="toolbar" fxLayout="row" fxLayoutAlign="center center" fxLayoutAlign.xs="center center">
+    <span class="toolbar-content" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center start">
+      <button mat-icon-button (click)="toggleNav()" fxHide fxShow.xs class="nav-button" *ngIf="!toggleDrawer">
+        <mat-icon>
+          sort
+        </mat-icon>
+      </button>
+      <img src="../../assets/logo.png" routerLink="/" alt="" height="60px" style="outline: none;">
+      <div fxLayout="row" fxLayoutAlign="start end" fxLayoutGap="16px" style="height: 60px;">
+        <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" fxHide.xs routerLinkActive="active-link"
+          routerLink="/">Home</a>
+        <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" fxHide.xs routerLinkActive="active-link"
+          routerLink="about">About</a>
+        <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" fxHide.xs routerLinkActive="active-link"
+          routerLink="contact">Contact</a>
+      </div>
+    </span>
+  </mat-toolbar>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div style="border-bottom: 1px solid #DDDDDD; box-shadow: 1px 4px 7px #DDDDDD; width: 80%;"></div>
+  </div>
+
+  <!-- <mat-drawer-container hasBackdrop="true">
+  <mat-drawer class="example-container" *ngIf="toggleDrawer" mode="over">I'm a drawer</mat-drawer>
+</mat-drawer-container> -->
+  <router-outlet></router-outlet>
+  <mat-sidenav opened mode="over" fxHide fxShow.xs *ngIf="toggleDrawer" style="background-color: transparent;">
+    <div fxLayout="column">
+      <a (click)="toggleNav()" style="padding-top: 3em;">
+        <mat-icon>
+          keyboard_arrow_left
+        </mat-icon>
+      </a>
+      <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link"
+        routerLink="/">Home</a>
+      <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link"
+        routerLink="about">About</a>
+      <a style="outline: none;" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active-link"
+        routerLink="contact">Contact</a>
     </div>
-  </span>
-</mat-toolbar>
-<div fxLayout="row" fxLayoutAlign="center center">
-  <div style="border-bottom: 1px solid #DDDDDD; box-shadow: 1px 4px 7px #DDDDDD; width: 80%;"></div>
-</div>
-<router-outlet></router-outlet>
+    <div class="sidenav blur-bg height-90" fxLayout="row"></div>
+  </mat-sidenav>
+</mat-sidenav-container>

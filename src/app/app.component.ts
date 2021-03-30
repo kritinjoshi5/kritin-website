@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-angular-portfolio';
+  toggleDrawer:Boolean = false;
+  toggleNav() {
+    this.toggleDrawer = !this.toggleDrawer
+  }
 }
