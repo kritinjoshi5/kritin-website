@@ -55,6 +55,9 @@ a:hover {
         width: 100%;
         position: relative;
     }
+    .mat-drawer-inner-container {
+        overflow: hidden;
+    }
     a {
         color: #aaaaaa;
         text-align: start;

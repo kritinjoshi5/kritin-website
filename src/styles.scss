@@ -40,4 +40,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @media ( max-width: 600px ) {
   html, body { overflow-y: auto;}
+
+  .mat-drawer-inner-container {
+      overflow: hidden !important;
+  }
 }

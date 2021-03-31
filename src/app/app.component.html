@@ -1,7 +1,7 @@
 <mat-sidenav-container style="background: transparent;">
   <mat-toolbar class="toolbar" fxLayout="row" fxLayoutAlign="center center" fxLayoutAlign.xs="center center">
     <span class="toolbar-content" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.xs="center start">
-      <button mat-icon-button (click)="toggleNav()" fxHide fxShow.xs class="nav-button" *ngIf="!toggleDrawer">
+      <button mat-icon-button (click)="toggleNav()" fxHide fxShow.xs class="nav-button">
         <mat-icon>
           sort
         </mat-icon>
@@ -27,7 +27,7 @@
   <router-outlet></router-outlet>
   <mat-sidenav opened mode="over" fxHide fxShow.xs *ngIf="toggleDrawer" style="background-color: transparent;">
     <div fxLayout="column">
-      <a (click)="toggleNav()" style="padding-top: 3em;">
+      <a (click)="toggleNav()" style="padding-top: 2.2em;">
         <mat-icon>
           keyboard_arrow_left
         </mat-icon>

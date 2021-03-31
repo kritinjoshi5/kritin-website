@@ -16,6 +16,10 @@
     color: rgb(0, 129, 168);
 }
 
+.avatar {
+    width: 300px;
+}
+
 @media (max-width: 600px) {
     .waves {
         top: 1%;
@@ -25,5 +29,8 @@
         top: 15%; width: 100%;
         right: 0;
         text-align: end;
+    }
+    .avatar {
+        width: 200px;
     }
 }
