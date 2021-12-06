@@ -1,9 +1,30 @@
-.card-width {
+.card {
     width: 80%;
     background-color: #161c23; color: rgb(236, 236, 236);
+    border: 1px solid #ffffff50;
 }
 
 .social-anchor {
     height: 40px;
     width: 60px;
+}
+
+.mat-card-title {
+    font-size: 18px;
+}
+
+.mat-card-content {
+    color: #ffffff80;
+    font-weight: 300;
+    letter-spacing: 0.7px;
+    font-size: 13px;
+}
+
+h4 {
+    color: #ffffffe0;
+    margin: 0px;
+}
+
+h5 {
+    margin: 0px;
 }

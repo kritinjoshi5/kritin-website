@@ -39,7 +39,6 @@ html, body { height: 100%; background-color: #020408; overflow-x: hidden; overfl
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 @media ( max-width: 600px ) {
-  html, body { overflow-y: auto;}
 
   .mat-drawer-inner-container {
       overflow: hidden !important;

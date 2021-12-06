@@ -1,63 +1,78 @@
-<div fxLayout="row" style="width: 100%; margin-top: 1em;" fxLayout.xs="column" fxLayoutAlign="space-around center"
+<div fxLayout="column" style="width: 100%; margin-top: 1em; overflow: auto; height: 80vh;" fxLayout.xs="column" fxLayoutAlign="start center"
     fxLayoutGap="16px">
-    <mat-card class="card-width">
+    <mat-card class="card">
         <mat-card-title>
             About
         </mat-card-title>
-        <mat-divider style="border-top-color: white"></mat-divider>
         <br>
         <mat-card-content>
-            <p>I love designing and developing web applications. It is my constant endeavour
+            You know my name, now let me tell you more :) <p></p><p>I love designing and developing so I choose Frondend Development. It is my constant endeavour
                 to serve to my clients with solutions that are in the best interest of their business requirements,
                 instead of what technologies I embrace as a developer.
             </p>
+            <p>I live to beautify things as well as I'm very much focused on rendering time, and efficiency. Code commenting and readebility is always part of my consern while doing so.</p>
         </mat-card-content>
-        <br>
+    </mat-card>
+    <mat-card class="card">
         <mat-card-title>
             Technologies
         </mat-card-title>
-        <mat-divider style="border-top-color: white"></mat-divider>
         <br>
         <mat-card-subtitle>
             <mat-chip-list fxLayout="row">
-                <mat-chip color="primary" selected
-                    *ngFor="let tech of ['Angular', 'ReactJs', 'VueJs', 'Html', 'Styling', 'UX/UI Design']">
-                    <span style="width: 20px; border-radius: 50%; height: 20px;" fxLayout="row"
+                <mat-chip color="secondary" selected
+                    *ngFor="let tech of technologies">
+                    <span style="width: 20px; border-radius: 50%; height: 20px; border: 1px solid rgba(0, 0, 0, 0.5);" fxLayout="row"
                         fxLayoutAlign="center center"
-                        [ngStyle]="{'background-color': tech === 'ReactJs' ? 'black' : 'white'}">
-                        <img src="../../assets/angular-logo.svg.png" width="20px" *ngIf="tech === 'Angular'" alst="">
-                        <img src="../../assets/react-logo.svg.png" width="20px" *ngIf="tech === 'ReactJs'" alt="">
-                        <img src="../../assets/vuejs-logo.png" width="15px" *ngIf="tech === 'VueJs'" alt="">
-                        <img src="../../assets/html-logo.jpeg" width="18px" style="border-radius: 50%;"
-                            *ngIf="tech === 'Html'" alt="">
-                        <img src="../../assets/css-logo.jpeg" width="18px" style="border-radius: 50%;"
-                            *ngIf="tech === 'Styling'" alt="">
-                        <img src="../../assets/uxi-logo.jpeg" width="18px" style="border-radius: 50%;"
-                            *ngIf="tech === 'UX/UI Design'" alt="">
+                        [ngStyle]="{'background-color': tech.name === 'ReactJs' ? 'black' : 'white'}">
+                        <img [src]="tech.img" [ngStyle]="{'width': tech.width}" style="border-radius: 50%;"  alst="">
                     </span>
                     &nbsp;
-                    {{ tech }}
+                    {{ tech.name }}
                     &nbsp;
                 </mat-chip>
             </mat-chip-list>
         </mat-card-subtitle>
+    </mat-card>
+    <mat-card class="card">
+        <mat-card-title>
+            Tools
+        </mat-card-title>
         <br>
+        <mat-card-subtitle>
+            <mat-chip-list fxLayout="row">
+                <mat-chip color="secondary" selected
+                    *ngFor="let tech of tools">
+                    <span style="width: 20px; border-radius: 50%; height: 20px; border: 1px solid rgba(0, 0, 0, 0.5);" fxLayout="row"
+                        fxLayoutAlign="center center"
+                        [ngStyle]="{'background-color': tech.name === 'ReactJs' ? 'black' : 'white'}">
+                        <img [src]="tech.img" [ngStyle]="{'width': tech.width}" style="border-radius: 50%;"  alst="">
+                    </span>
+                    &nbsp;
+                    {{ tech.name }}
+                    &nbsp;
+                </mat-chip>
+            </mat-chip-list>
+        </mat-card-subtitle>
+    </mat-card>
+    <mat-card class="card">
         <mat-card-title>
             Experience
         </mat-card-title>
-        <mat-divider style="border-top-color: white"></mat-divider>
         <br>
         <mat-card-content>
-            <h3>
-                # Provakil - Software Developer
-            </h3>
+            <div fxLayout="row" fxLayoutGap="16px" style="color: #ffffffe0;">
+                <h3>
+                    Provakil - Sr. Frontend Developer
+                </h3>
+                <h5>August 2019 - present</h5>
+            </div>
             <span>
-                August 2019 - present <br>
                 <div>
                     Owned multiple modules of industry leading application; execution includes -
                     <ul>
                         <li>
-                            Migration of production web app incrementally with 5000 DAU from backbone to Vuejs
+                            Migration of production web app incrementally with 5000 DAU from backbone to Vuejs 2.x
                         </li>
                         <li>
                             Building modules for highly configurable workflows
@@ -68,18 +83,83 @@
                     </ul>
                 </div>
             </span>
-            <h3>
-                # Sanskrut Corpation - Frontend Lead
-            </h3>
-            <p>
-                July 2016 - August 2019<br>
-            </p>
+            <div fxLayout="row" fxLayoutGap="16px" style="color: #ffffffe0;">
+                <h3>
+                    Sanskrut Corpation - Frontend Lead
+                </h3>
+                <h5 >July 2016 - August 2019</h5>
+            </div>
+            <span>
+                <div>
+                    Built multiple SaaS management systems for off-shore clients
+                    <ul>
+                        <li>
+                            Learning Management System.
+                        </li>
+                        <li>
+                            Project Management System.
+                        </li>
+                        <li>
+                            Client Management System.
+                        </li>
+                    </ul>
+                </div>
+            </span>
         </mat-card-content>
-        <br>
+    </mat-card>
+    <mat-card class="card">
         <mat-card-title>
-            Social
+            Projects
         </mat-card-title>
-        <mat-divider style="border-top-color: white"></mat-divider>
+        <br>
+        <mat-card-content fxLayout="column">
+            <h4>
+                Report Generation Tool <h5>(Vuejs 2.x)</h5>
+            </h4>
+            <span>
+                Designed and developed tool for doctors to generate their patients report
+                and configure the forms using a fully dynamic form builder. User(dr.) can
+                modify the form according to their need.  
+            </span>
+            <br>
+            <h4>
+                Lake Way Flower Shop <h5>(Angular 4.x)</h5>
+            </h4>
+            <span>
+                Designed and developed e-commerce solution with POS for in-store purchases
+                & integrated website for online bookings with a feature rich admin panel
+                for creating promotions, managing invetory and customer interations.
+            </span>
+            <br>
+            <h4>
+                Employee Management <h5>(Vuejs 2.x)</h5> 
+            </h4>
+            <span>
+                Simple CRUD app to make an eye on employee details.
+                A stepper form for employee details and list of employees on dashboard as a list.
+                App is using a state management to perform all CRUDs and manage data of list.
+            </span>
+            <br>
+            <h4>
+                The Housie Table <h5>(Vuejs 2.x)</h5>
+            </h4>
+            <span>
+                A Simple dashboard to call the current table number and to cross check
+                numbers which was already called during the game.
+            </span>
+            <br>
+            <h4>
+                Kritin Joshi Website <h5>(Angular 11.x)</h5>
+            </h4>
+            <span>
+                Even the webiste you are looking at. That is build on angular platform.
+            </span>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="card">
+        <mat-card-title>
+            Connect Me @
+        </mat-card-title>
         <br>
         <mat-card-content fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="center center" fxLayoutGap="12px">
             <a href="https://www.facebook.com/kritin.joshi.5" class="social-anchor">
@@ -92,6 +172,11 @@
                 <img height="40px"  style="
                 background-color: white;
                 border-radius: 50%;" src="../../assets/github_logo.png" alt="">
+            </a>
+            <a href="https://dribbble.com/kritinjoshi5" class="social-anchor">
+                <img height="40px"  style="
+                background-color: white;
+                border-radius: 50%;" src="../../assets/dribbble.png" alt="">
             </a>
         </mat-card-content>
     </mat-card>
